@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<div> </div>
+<header>
+    <div class="searchbox">
+        <ul class="searchbar">
+            <form action="/movielist/search" method="POST">
+                <li>
+                    <select id="browser_movie" name="mybrowser_movie">
+                        <option value="title" selected>Title</option>
+                        <option value="genre">Genre</option>
+                    </select>
+                </li>
+                <li>
+                    <input class="text" type="text" name="input_value" placeholder="Let's find a movie!">
+                </li>
+                <li>
+                    <button type="submit" class="input_btn"><i class="fas fa-search"></i></button>
+                </li>
+            </form>
+        </ul>
+    </div>
+</header>
+<main>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 80px;"></th>
+                <th style="width: 150px;">Title</th>
+                <th style="width: 100px;">Genre</th>
+                <th style="width: 90px;">Points</th>
+                <th style="width: 120px;"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for a in movies %}
+            <tr>
+                
+                <td>{{loop.index}}</td>
+                <td>{{a.title}}</td>
+                <td>{{a.genre}}</td>
+                <form action="/movielist" method="post" action="/movielist">
+                    <td>
+                        <label for="ForPoints"></label>
+                        <select name="points" >
+                            <option value='drop'>-</option>
+                            <option value=1 {% if points_dict %}{% if points_dict[a.title] == 1 %} selected {% endif %}{% endif %}>⭐️</option>
+                            <option value=2 {% if points_dict %}{% if points_dict[a.title] == 2 %} selected {% endif %}{% endif %}>⭐️⭐️</option>
+                            <option value=3 {% if points_dict %}{% if points_dict[a.title] == 3 %} selected {% endif %}{% endif %}>⭐️⭐️⭐️</option>
+                            <option value=4 {% if points_dict %}{% if points_dict[a.title] == 4 %} selected {% endif %}{% endif %}>⭐️⭐️⭐️⭐️</option>
+                            <option value=5 {% if points_dict %}{% if points_dict[a.title] == 5 %} selected {% endif %}{% endif %}>⭐️⭐️⭐️⭐️⭐️</option>
+                        </select>
+                    </td>
+                    <td><input class="saveBtn" id="{{loop.index}}" name="{{a.title}}" type="submit" value="I saw it!"></td>
+                </form>
+            </tr>
+            {% endfor %}
+        </tbody>
+</main>
+{% endblock %}
+
+

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+    <span></span>
+    <section class="randomrecobox">
+        <span class="randomreco" id="reconame">오늘 영화 한 편 어떠세요?</span>
+        <img src='../static/images/watching_movie.png' width="250">
+    </section>
+
+{% if alert_signout %}
+    <script type="text/javascript">
+        alert("정상적으로 로그아웃 되었습니다.");
+    </script>
+{% endif %}
+
+{% if alert_success_signup %}
+    <script type="text/javascript">
+        alert("O.Young.Uh.의 회원이 되신 것을 환영합니다! 다시 로그인해 주십시오.");
+    </script>
+{% endif %}
+
+{% if alert_need_login %}
+    <script type="text/javascript">
+        alert("로그인이 필요한 서비스 입니다.");
+    </script>
+{% endif %}
+
+{% if alert_login_success %}
+    <script type="text/javascript">
+        alert("성공적으로 로그인 되었습니다!");
+    </script>
+{% endif %}
+
+{% endblock %}

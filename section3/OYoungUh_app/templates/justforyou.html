@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+    <span></span>
+    <section class="randomrecobox">
+        <span class="randomreco" id="reconame">🎬 오늘 영화 한 편 어떠세요? 🎬</span>
+        <a href= "/userrecommend" class="randomreco" id="getstarted"><p class="getstart">Just For You!</p></a>
+    </section>
+
+{% if alert_signout %}
+    <script type="text/javascript">
+        alert("정상적으로 로그아웃이 완료되었습니다.");
+    </script>
+{% endif %}
+{% endblock %}

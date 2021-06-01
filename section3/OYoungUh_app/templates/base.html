@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!--base 자바스크립트-->
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+    <!--폰트-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Lobster&display=swap" rel="stylesheet">
+    <!--아이콘 스크립트-->
+    <script 
+    src="https://kit.fontawesome.com/c29e7b09d2.js"
+    crossorigin="anonymous"></script>
+    <title>O.Young.Uh.</title>
+    
+</head>
+
+<body>
+    {% block nav %}
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <a href="">O.Young.Uh.</a>
+        </div>
+        <ul class="navbar_menu">
+            <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="/movielist"><i class="fas fa-file-video"></i> Movie List</a></li>
+            <li><a href="/mypage"><i class="fas fa-user"></i> My Page</a></li>
+            <li><a href="/justforyou"><i class="fas fa-gift"></i> Just For You</a></li>
+        </ul>
+        <ul class="navbar_icons">
+            {% if not 'user_id' in session %}
+            <li><a href="/signin" class="singouticon"><i class="fas fa-sign-in-alt"></i></a></li>
+            {% endif %}
+            {% if 'user_id' in session %}
+            <li><a href="/signout" class="singinicon"><i class="fas fa-sign-out-alt"></i></a></li>
+            {% endif %}
+        </ul>
+        <a href="#" class="navbar_toggleBtn"><i class="fas fa-bars"></i></a>
+    </nav>
+    {% endblock %}
+    {% block body %}
+    {% endblock %}
+
+</body>
+</html>

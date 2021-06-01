@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block nav %}
+    <div class="signinform_wide">
+        <form method="POST" action="/signin" class="signinformitems">
+            <span class="signin_logo">
+                <a href="#">O.Young.Uh.</a>
+            </span>
+            <ul class="signin">
+                <li><input class="text" type="text" name="user_id" placeholder="ID"></li>
+                <li><input class="text" type="password" name="user_password" placeholder="PASSWORD"></li>
+                <li><input class="Btn" type="submit" value="Log In!"></li>
+            </ul>
+            <a href="/signup" class="signinexcept">Join Us</a>
+        </form>
+    </div>
+{% if alert_mismatch %}
+    <script type="text/javascript">
+        alert("로그인 정보를 다시 입력해주세요.");
+    </script>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+    <div> </div>
+    <section class="randomchoice">
+        <span class="randomreco" id="recotitle">🎬 이 영화 한 편 어때요? 🎬</span>
+        <span class="randomreco" id="recosub">A movie just for you 🤩</span>
+        <div class="result">혹시, <br><span class="onemovie">{{recomovie.title}}</span><div><br>어때요?</div></div>
+        <a href= "/userrecommend" class="randomreco" id="retry"><p class="retry">다른 걸로 볼까요?</p></a>
+    </section>
+{% endblock %}

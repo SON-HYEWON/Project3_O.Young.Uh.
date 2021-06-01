@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block nav %}
+    <div class="signinform_wide">
+        <form method="POST" action="/signup" class="signinformitems">
+            <span class="signin_logo">
+                <a href="#">O.Young.Uh.</a>
+            </span>
+            <ul class="signin">
+                <li><input class="text" type="text" name="user_id" placeholder="ID"></li>
+                <li><input class="text" type="password" name="user_password" placeholder="PASSWORD"></li>
+                <li><input class="Btn" type="submit" value="Sign In"></li>
+            </ul>
+        </form>
+    </div>
+{% if alert_need_info %}
+    <script type="text/javascript">
+        alert("모든 정보를 올바르게 입력했는지 확인한 후 다시 시도하십시오.");
+    </script>
+{% endif %}
+{% if alert_overlapID %}
+    <script type="text/javascript">
+        alert("이미 사용 중인 아이디 입니다. 다른 아이디를 입력해 주십시오.");
+    </script>
+{% endif %}
+{% endblock %}

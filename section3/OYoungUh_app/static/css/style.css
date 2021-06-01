@@ -1,0 +1,448 @@
+/* 배경 이미지 및 폰트 설정 */
+html {
+  background: #734b6d;  /* fallback for old browsers */
+  
+  font-family: 'Lobster', cursive;
+  font-family: 'Do Hyeon', sans-serif;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #d4bfe6;
+}
+
+/* 네비바 설정 */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff3b;
+  padding: 8px 12px;
+  border: 8px 12px;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+}
+
+.navbar_logo {
+  font-size: 26px;
+  font-family: 'Lobster', cursive;
+  font-weight: 900;
+  margin-bottom: 8px;
+  margin-top: 4px;
+  margin-left: 4px;
+  padding: 0 8px;
+}
+
+.navbar_menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin: 0%;
+}
+
+.navbar_menu i {
+  color: #42275a;
+}
+.navbar_menu li {
+  padding: 8px 30px;
+}
+
+.navbar_menu li:hover {
+  background-color: #ffffff1e;
+  border-radius: 4px;
+}
+
+.navbar_icons {
+  display: flex;
+  list-style: none;
+  padding: 0 24px;
+  margin: 0%;
+}
+
+.navbar_icons li {
+  padding: 8px 12px;
+}
+
+.navbar_toggleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+}
+/* main page */
+
+
+/* justforyou page */
+.randomrecobox {
+  font-size: 3rem;
+  font-weight: 300;
+  position: absolute;
+  width: 80%;
+  height: 40%;
+  background-color: #ffffff10;
+  background-position: center;
+  text-align: center;
+  left: 10%;
+  top: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #42275a;
+  z-index: 1;
+  box-shadow: 7px 7px 7px #00000011;
+  }
+
+#getstarted {
+  font-size: 2rem;
+  font-weight: 900;
+  position: relative;
+  width: 20rem;
+  height: 5rem;
+  background-color: #ffffff1e;
+  text-align: center;
+  margin-left: -280px;
+  margin-top: -280px;
+  left: 12%;
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 100px;
+  box-shadow: 7px 7px 7px #00000011;
+}
+
+#getstarted:hover {
+  background-color: #d4bfe6;
+  color: #734b6d;
+}
+
+.randomreco {
+  padding: 1.1rem;
+}
+
+#reconame {
+  padding-top: 2rem;
+  font-size: 2.7rem;
+  color: #2e1d3d;
+}
+
+.getstart {
+  position: absolute;
+  left: 25%;
+  top: 0%;
+}
+
+/* userrecommend page */
+.randomchoice {
+  font-size: 3rem;
+  font-weight: 900;
+  position: absolute;
+  width: 35rem;
+  height: 45rem;
+  background-color: #ffffff10;
+  text-align: center;
+  margin-left: -280px;
+  margin-top: -280px;
+  left: 50%;
+  top: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 7px 7px 7px #00000011;
+  color: #42275a;
+  z-index: 1;
+}
+#recotitle{
+  color: #2e1d3d;
+}
+
+#recosub{
+  font-size: 2rem;
+  color: #734b6d
+}
+#retry {
+  font-size: 2rem;
+  font-weight: 900;
+  position: absolute;
+  width: 20rem;
+  height: 5rem;
+  background-color: ffffff1e;
+  text-align: center;
+  left: 20%;
+  top: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 100px;
+  color: #42275a;
+  box-shadow: 7px 7px 7px #00000011;
+}
+
+#retry:hover {
+  background-color: #d4bfe6;
+  color: #734b6d;
+}
+
+.retry {
+  position: absolute;
+  top: -3%;
+}
+
+.onemovie {
+  color: #d4bfe6;
+}
+
+
+/* movilist page */
+
+.searchbox {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #734b6d;
+  box-shadow: 7px 7px 7px #00000011;
+  top: 4.1rem;
+  position: fixed;
+  z-index: 10;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.searchbar form {
+  list-style: none;
+  padding-left: 0;
+  margin: 0%;
+  display: flex;
+  border: #42275a solid 2px;
+}
+
+.searchbar li {
+  padding-left: 0.5rem;
+  flex-direction: column;
+}
+
+.searchbar li .text {
+  width: 485px;
+  height: 2.3rem;
+  border: none;
+  background-color: #734b6d;
+  padding-left: 0.5rem;
+}
+
+#browser_movie {
+  width: 7rem;
+  height: 2.3rem;
+  padding-left: 0.5rem;
+  padding-right: 0;
+  border: none;
+  background-color: #734b6d;
+} 
+
+.searchbar li #browser_movie:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.searchbar li input {
+  outline: none;
+  box-shadow: none;
+}
+
+.searchbar li .input_btn {
+  width: 5rem;
+  height: 2.4rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #734b6d;
+  border: none;
+  background-color: #42275a;
+}
+
+.searchbar li .input_btn:hover {
+  background-color: #d4bfe6;
+}
+
+main {
+  top: 13rem;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  position: relative;
+  left: 14%;
+  width: 70%;
+  align-items: center;
+  text-align: center;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+th {
+  line-height: 3rem;
+  background-color: #42275a;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #734b6d;
+}
+
+td {
+  height: 45px;
+  line-height: 45px;
+  border-bottom: #b1b1b1 1px solid;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.movielist {
+  position: relative;
+  width: 15rem;
+  height: 10rem;
+  top: 21%;
+  border: none;
+}
+
+tbody tr {
+  text-align: center;
+}
+
+tbody tr:hover {
+  color: #734b6d;
+  background-color: #d4bfe6;
+}
+
+td select {
+  border: none;
+  width: 45px;
+  height: 35px;
+  font-size: 15px;
+  background-color: #734b6d;
+}
+
+td select:hover {
+  color: #734b6d;
+  background-color: #d4bfe6;
+}
+
+.saveBtn {
+  align-items: center;
+  width: 5rem;
+  height: 2.4rem;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 15px;
+  color: #734b6d;
+  border: none;
+  background-color: #42275a;
+  border-radius: 5px;
+}
+
+.saveBtn:hover {
+  background-color: #d4bfe6;
+}
+
+/* login page */
+.signinform_wide {
+  font-size: 24px;
+  font-weight: 900;
+  position: absolute;
+  width: 30rem;
+  height: 22rem;
+  background-color: #ffffff10;
+  text-align: center;
+  margin-left: -240px;
+  margin-top: -200px;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 7px 7px 7px #00000011;
+}
+
+.signinformitems {
+  position: relative;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.signin {
+  padding: 0 0;
+  margin: 24px 0;
+  align-items: center;
+}
+.signin_logo {
+  font-family: 'Lobster', cursive;
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+.text {
+  background-color: rgb(184, 152, 192);
+}
+
+.signin li {
+  list-style: none;
+  align-items: center;
+  padding: 0 0 1rem 0;
+  border: none;
+}
+
+.signin li .text {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(88, 88, 88);
+  height: 2.1rem;
+  width: 22rem;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.signin li .Btn {
+  height: 2.5rem;
+  width: 22.5rem;
+  background-color: #734b6d;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #d4bfe6;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.signin li .Btn:hover {
+  background-color: #42275a;
+}
+
+.signinexcept {
+  color: rgb(66, 66, 66);
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.signinexcept_wide {
+  color: #734b6d;
+  font-size: 0.8rem;
+  font-weight: 300;
+  position: absolute;
+  left: 45%;
+  top: 90%;
+}
