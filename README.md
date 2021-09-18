@@ -1,4 +1,4 @@
-# 🎬 O.Young.Uh. (aka.오늘 영화 한 편 어떠세요?)
+# 🎥 O.Young.Uh. (aka.오늘 영화 한 편 어떠세요?)
 
 ### https://oyounguh.herokuapp.com/
 
